@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="AkademiaKodu11.3_MyWeather_javaFX">
+    <output-path>$PROJECT_DIR$/out/artifacts/AkademiaKodu11_3_MyWeather_javaFX</output-path>
+    <root id="root">
+      <element id="archive" name="AkademiaKodu11_3_MyWeather_javaFX.jar">
+        <element id="module-output" name="AkademiaKodu11.3_MyWeather_javaFX" />
+        <element id="library" level="project" name="Maven: org.json:json:20170516" />
+      </element>
+    </root>
+  </artifact>
+</component>
