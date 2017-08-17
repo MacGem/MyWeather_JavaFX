@@ -10,6 +10,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import models.WeatherInfo;
+import models.WeatherObserver;
 import models.services.HttpService;
 import models.services.IWeatherObserver;
 import models.services.WeatherService;
@@ -33,6 +34,11 @@ public class Controller implements Initializable, IWeatherObserver{
     private WeatherService weatherService = WeatherService.getService();
 
     public void initialize(URL location, ResourceBundle resources) {
+        /////////
+        weatherService.registerObserver(this);
+
+        new WeatherObserver();
+        //////////
         buttonShowWeather.setOnMouseClicked(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 try {
@@ -48,6 +54,10 @@ public class Controller implements Initializable, IWeatherObserver{
 //                    System.out.println("pressure: " + weatherService.getPressure());
 //                    System.out.println("humidity: " + weatherService.getHumidity());
 //                    System.out.println("cloudy:" + weatherService.getCloudy());
+
+                    /////////////
+
+                    //////////
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
