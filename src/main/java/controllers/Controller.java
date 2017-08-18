@@ -43,6 +43,7 @@ public class Controller implements Initializable, IWeatherObserver{
             public void handle(MouseEvent event) {
                 try {
                     weatherService.makeCall(textCity.getText());
+
 //                    labelWeather.setText("Temperatura: "+ weatherService.getTemp() +"\n"
 //                    + "Cisnienie: " + weatherService.getHumidity()+"\n"
 //                    + "Chmura: " + weatherService.getCloudy() +"\n"
@@ -67,7 +68,7 @@ public class Controller implements Initializable, IWeatherObserver{
 
     public void onWeatherUpdate(WeatherInfo info) {
         System.out.println("pogoda zaktualizowana!!!!!!!!!!!!");
-        textCity.setText("Temperatura: "+ info.getTemp() +"\n"
+        labelWeather.setText("Temperatura: "+ info.getTemp() +"\n"
                     + "Cisnienie: " + info.getPressure()+"\n"
                     + "Chmura: " + info.getCloudy() +"\n"
                     + "Wilgotnosc: " + info.getHumidity());

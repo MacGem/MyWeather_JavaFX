@@ -20,6 +20,7 @@ public class WeatherService {
 
     private List<IWeatherObserver> observerList = new ArrayList<>();
     private HttpService httpService;
+    //dane z API
     private double temp;
     private double pressure;
     private double humidity;
